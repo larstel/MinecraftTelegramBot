@@ -98,17 +98,26 @@ It's a bot.
    git clone https://github.com/larstel/MinecraftTelegramBot.git
    ```
 3. Install Python packages
+  * [Python-Telegram-Bot](https://pypi.org/project/python-telegram-bot/)
+  * [McRcon](https://pypi.org/project/mcrcon/)
 4. Enter your API in `telegram_bot.py`
-   ```JS
+   ```PY
    updater = Updater("TELEGRAM_TOKEN", use_context=True)
    ```
-
-
+5. Enter Minecraft Server IP-Address in `telegram_bot.py`
+   ```PY
+   mc_server_ip = "IP_ADDRESS"
+   ```
+6. Enter rcon password in `telegram_bot.py`
+   ```PY
+   mc_rcon_password = "PASSWORD"
+   ```
 
 <!-- USAGE EXAMPLES -->
 ## Usage
-
-
+```sh
+python3 telegram_bot.py
+```
 
 <!-- ROADMAP -->
 ## Roadmap

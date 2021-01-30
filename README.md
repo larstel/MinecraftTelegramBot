@@ -102,7 +102,7 @@ It's a bot.
   * [McRcon](https://pypi.org/project/mcrcon/)
 4. Enter your API in `telegram_bot.py`
    ```PY
-   updater = Updater("TELEGRAM_TOKEN", use_context=True)
+   telegram_token = "TOKEN"
    ```
 5. Enter Minecraft Server IP-Address in `telegram_bot.py`
    ```PY

@@ -33,7 +33,7 @@ def help(update, context):
 
 def online(update, context):
     """Send a message when the command /online is issued."""
-    with MCRcon(mc_server_ip, mc_rcon_password") as mcr:
+    with MCRcon(mc_server_ip, mc_rcon_password) as mcr:
         resp = mcr.command("/list")
         update.message.reply_text(resp)
         print(resp)

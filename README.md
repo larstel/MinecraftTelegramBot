@@ -93,7 +93,7 @@ It's a bot.
 ### Installation
 
 1. Get a free API Key at [https://core.telegram.org/bots#6-botfather](https://core.telegram.org/bots#6-botfather)
-2. Clone the repo
+2. Clone the repo into the Minecraft server folder
    ```sh
    git clone https://github.com/larstel/MinecraftTelegramBot.git
    ```

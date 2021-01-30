@@ -6,6 +6,14 @@ import os
 from telegram.ext import Updater, CommandHandler, MessageHandler, Filters
 from mcrcon import MCRcon
 
+####################################
+# Settings (!!change it!!)
+telegram_token = "TOKEN"
+mc_server_ip = "IP_ADDRESS"
+mc_rcon_password = "PASSWORD"
+####################################
+
+
 # Enable logging
 logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
                     level=logging.INFO)
@@ -25,19 +33,19 @@ def help(update, context):
 
 def online(update, context):
     """Send a message when the command /online is issued."""
-    with MCRcon("192.168.178.47", "123ichbincool") as mcr:
+    with MCRcon(mc_server_ip, mc_rcon_password") as mcr:
         resp = mcr.command("/list")
         update.message.reply_text(resp)
         print(resp)
 
 def sound(update, context):
     """Send a message when the command /sound is issued."""
-    with MCRcon("192.168.178.47", "123ichbincool") as mcr:
+    with MCRcon(mc_server_ip, mc_rcon_password) as mcr:
         resp = mcr.command("/playsound minecraft:entity.villager.ambient voice @a")
 
 def send(update, context):
     """Send a message when the command /send is issued."""
-    with MCRcon("192.168.178.47", "123ichbincool") as mcr:
+    with MCRcon(mc_server_ip, mc_rcon_password) as mcr:
         name = update.message.from_user.first_name
         mess = update.message.text
         resp = mcr.command('/say ' + name + ":" + mess[5:])
@@ -83,12 +91,10 @@ def stop_watchdog(update, context):
 
 old_file_size = 0
 watchdog_enabled = True
+
 def main():
     """Start the bot."""
-    # Create the Updater and pass it your bot's token.
-    # Make sure to set use_context=True to use the new context based callbacks
-    # Post version 12 this will no longer be necessary
-    updater = Updater("TELEGRAM_TOKEN", use_context=True)
+    updater = Updater(telegram_token, use_context=True)
 
     # Get the dispatcher to register handlers
     dp = updater.dispatcher

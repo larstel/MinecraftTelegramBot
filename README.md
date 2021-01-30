@@ -126,6 +126,12 @@ Change following lines in `server.properties`, which is created by the Minecraft
 python3 telegram_bot.py
 ```
 
+In Telegram you can use the following commands:
+*/startWatchdog (Bot wirtes messages in the chat when a player joins/left/is killed/messages)
+*/stopWatchDog
+*/online (shows all players who are playing)
+*/send "Your text" (write a message, which is displayed ingame)
+
 <!-- ROADMAP -->
 ## Roadmap
 

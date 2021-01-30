@@ -90,6 +90,12 @@ It's a bot.
 
 ### Prerequisites
 
+Change following lines in `server.properties`, which is created by the Minecraft server.
+   ```pro
+   enable-rcon=true
+   rcon.password=PASSWORD
+   ```
+
 ### Installation
 
 1. Get a free API Key at [https://core.telegram.org/bots#6-botfather](https://core.telegram.org/bots#6-botfather)

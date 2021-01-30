@@ -78,7 +78,8 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-It's a bot.
+This is a telegram bot which connects the ingame chat and telegram group chat.
+Only for the java server version.
 
 ### Built With
 
